@@ -1,4 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
 <body>
-    <a href="http://86.76.10.88/" target="myIframe"></a>
-    <iframe src="http://86.76.10.88/" height="100%" width="100%" name ="myIframe"></iframe>
+
+<div id="xhrredirect"></div>
+
+
+<script>
+// used to display account authentication
+var request = new XMLHttpRequest();
+
+request.addEventListener("load", function(evt){
+    var parser      = new DOMParser ();
+    var responseDoc = parser.parseFromString (request.responseText, "text/html");
+    document.getElementById("xhrredirect").innerHTML=responseDoc.innerHTML;
+}, false);
+
+request.open('GET', 'http://86.76.10.88/', true),
+request.send();
+
+}
+</script>
+
+<!-- Third Grid -->
+
 </body>
+</html>
