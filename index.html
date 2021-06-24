@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
+<head>
+	<title>HTML Redirect</title>
+	<meta http-equiv="refresh"
+		content="5; url = http://86.76.10.88" />
+</head>
 
 <body>
-
-<div id="xhrredirect"></div>
-
-
-<script>
-// used to display account authentication
-var request = new XMLHttpRequest();
-
-request.addEventListener("load", function(evt){
-    var parser      = new DOMParser ();
-    var responseDoc = parser.parseFromString (request.responseText, "text/html");
-    document.getElementById("xhrredirect").innerHTML=responseDoc.innerHTML;
-}, false);
-
-request.open('GET', 'http://86.76.10.88/', true),
-request.send();
-
-</script>
-
-<!-- Third Grid -->
-
+	<h1 style="text-align:center;color:green;">
+		MyLittleCanasson
+	</h1>
+	
+	<p style="text-align:center;">
+		If your browser supports Refresh,
+		you'll be redirected to MyLittleCanasson
+		Homepage, in 5 seconds.
+	</p>
 </body>
+
 </html>
